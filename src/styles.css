@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+html, body, #root { height: 100%; }
+body {
+  background: #05060d;
+  color: #e7ecff;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+html { scroll-behavior: smooth; }
+
+/* Gradient text */
+.gradient-text {
+  background-image: linear-gradient(90deg, #4aa8ff, #b169ff, #4aa8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-glow { filter: drop-shadow(0 0 18px rgba(74,168,255,0.35)); }
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.glass-strong {
+  background: rgba(10,12,24,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hero background */
+.bg-hero {
+  background:
+    radial-gradient(60% 50% at 20% 10%, rgba(74,168,255,0.18), transparent 60%),
+    radial-gradient(50% 40% at 90% 20%, rgba(177,105,255,0.18), transparent 60%),
+    radial-gradient(60% 60% at 50% 100%, rgba(74,168,255,0.10), transparent 60%),
+    #05060d;
+}
+
+/* Typing cursor */
+.cursor-blink::after {
+  content: "|";
+  margin-left: 2px;
+  color: #b169ff;
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Custom cursor */
+.cursor-dot, .cursor-ring {
+  position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%); border-radius: 9999px;
+  transition: opacity 0.2s;
+}
+.cursor-dot { width: 6px; height: 6px; background: #b169ff; }
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(74,168,255,0.6);
+  transition: width 0.2s, height 0.2s, transform 0.08s linear;
+}
+@media (max-width: 768px) { .cursor-dot, .cursor-ring { display: none; } }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #07091a; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4aa8ff, #b169ff);
+  border-radius: 10px;
+}
+
+/* Loader */
+.loader-ring {
+  width: 64px; height: 64px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.08);
+  border-top-color: #4aa8ff; border-right-color: #b169ff;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
