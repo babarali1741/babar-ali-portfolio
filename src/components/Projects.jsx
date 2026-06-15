@@ -9,17 +9,17 @@ const projects = [
     tags: ["React", "Tailwind", "AI", "PDF"],
     gradient: "from-neon-blue/30 to-neon-purple/30",
     emoji: "📄",
-    live: "#",
-    code: "#",
+    live: "https://ai-resume-analyzer-ashen-gamma.vercel.app/",
+    code: "https://github.com/babarali1741/ai-resume-analyzer",
   },
   {
     title: "Eternal Frames",
-    desc: "A cinematic photography portfolio with smooth GSAP animations, masonry gallery and lightbox.",
+    desc: "A cinematic photography portfolio with , masonry gallery and lightbox.",
     tags: ["React", "GSAP", "Framer Motion"],
     gradient: "from-neon-purple/30 to-neon-blue/30",
     emoji: "📸",
-    live: "#",
-    code: "#",
+    live: "https://eternal-frames-git-main-babarali1741s-projects.vercel.app/",
+    code: "https://github.com/babarali1741/Eternal-Frames",
   },
 ];
 
